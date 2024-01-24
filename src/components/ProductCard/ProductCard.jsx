@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './ProductCard.css';
 import { BsCartPlusFill } from 'react-icons/bs';
 import propTypes from 'prop-types';
 
 
 import locale from '../../utils/locale';
+import AppContext from '../../context/AppContext';
 
 
 function ProductCard({ data }) {
 
 
   const { title, price, thumbnail } = data;
+
+  const { cartItems, setCartItems } = useContext(AppContext);
+
+  const handleAddCart = () => setCartItems([ ...cartItems, data ]);
 
   // const thumbLimpa = thumbnail.replace(/\w\.jpg/gi,'W.jpg');
 
@@ -27,7 +32,10 @@ function ProductCard({ data }) {
 
       </div>
 
-      <button type="button" className="button__add-cart">
+      <button
+        type="button"
+        className="button__add-cart"
+        onClick={ handleAddCart }>
         <BsCartPlusFill />
       </button>
     </section>
