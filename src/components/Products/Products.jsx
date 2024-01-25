@@ -14,7 +14,7 @@ function Products() {
 
   useEffect(() => {
 
-    fetchProducts('iphone').then((response) => {
+    fetchProducts('action figure anime').then((response) => {
 
       setProducts(response);
       setLoading(false);

@@ -1,0 +1,31 @@
+/* .cart-item-count
+{
+  display: flex;
+  align-items: center;
+  background-color: red;
+  justify-content: space-between;
+  width: 100px;
+  padding: 10px;
+}
+
+.button__count-minus
+{
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.button__count-plus
+{
+  background: none;
+  border: none;
+  font-size: 1.0rem;
+  cursor: pointer;
+}
+
+.item-count-span
+{
+  font-size: 1.2rem;
+  
+} */
